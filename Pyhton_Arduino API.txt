@@ -1,0 +1,45 @@
+﻿Python/Arduino API
+class Arduino:
+
+
+The Arduino class represents the connection to the Arduino and contains all relevant functions. It connects to the Arduino and has all relevant functions.
+
+
+Functions:
+
+
+__init__(self, port)
+This constructor creates the connection to the Arduino using the name of the appropriate port as a parameter. Each port may be different depending on the machine being used so it is important to ensure that you are passing in the correct port.
+
+
+countPeople(self, host, user, password, db)
+This function takes the host name, username, password, and database name as arguments. It then connects to the database and adds to it whenever a passerby walks by in the correct direction. It triggers green and red LED lights to signal when it is detecting motion.
+
+
+writeLED(self, pin, status)
+This function takes the pin number and desired status (0 or 1) as parameters and writes that status to the pin. This allows the user to easily turn the LED lights on or off.
+
+
+Fields
+self.board
+This variable represents the connection to the Arduino board.
+
+
+Self.it
+This variable represents the iterator to avoid buffer overflow in the Arduino board.
+
+
+pirPin
+This variable stores the connection to the first PIR sensor.
+
+
+pirPin2
+This variable stores the connection to the second PIR sensor.
+
+
+redPin
+This variable stores the pin number for the red LED light.
+
+
+greenPin
+This variable stores the pin number for the green LED light.
